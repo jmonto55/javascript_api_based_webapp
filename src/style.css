@@ -12,6 +12,7 @@ body {
 header {
   width: 100%;
   border: solid 1px #272727;
+  padding: 20px;
 }
 
 .nav_bar {
