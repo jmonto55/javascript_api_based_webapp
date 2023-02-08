@@ -1,10 +1,8 @@
 <a name="readme-top"></a>
 
 <div align="center">
+   <h1><b>Awesome Meals</b></h1>
   <img src="./src/assets/readme_img.png" alt="Awesome Meals image" width="100%" />
-
-  <h3><b>Awesome Meals</b></h3>
-
 </div>
 
 <!-- TABLE OF CONTENTS -->
