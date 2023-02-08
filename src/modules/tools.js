@@ -1,5 +1,11 @@
 import { getMeals, likeMeal, getLikes } from './api.js';
 
+const updateMealsQt = () => {
+  const mealsQuantity = document.querySelectorAll('.card').length;
+  const contMeals = document.querySelector('.cont_meals');
+  contMeals.innerHTML = `Meals (${mealsQuantity})`;
+};
+
 const displayMeals = async () => {
   const idArr = await getMeals();
   const likesArr = await getLikes();
@@ -25,25 +31,30 @@ const displayMeals = async () => {
       </div>
     </card>`;
   }
+  updateMealsQt();
 };
 
-const saveLike = async (id) => {
-  await likeMeal(id);
+const saveLikeDOM = async (id) => {
   let currLikes = document.getElementById(id).childNodes[3].childNodes[3].childNodes[3].innerHTML;
   currLikes = Number(currLikes.substring(0, 2)) + 1;
   const likesContainer = document.getElementById(id).childNodes[3].childNodes[3].childNodes[3];
   likesContainer.innerHTML = `${currLikes} likes`;
 };
 
-const addLikesEL = async () => {
+const saveLikeAPI = async (id) => {
+  await likeMeal(id);
+};
+
+const addLikesEvLis = async () => {
   await displayMeals();
   const likesArr = document.querySelectorAll('.like');
   likesArr.forEach((e) => {
     e.onclick = () => {
       const { id } = e.parentElement.parentElement.parentElement;
-      saveLike(id);
+      saveLikeAPI(id);
+      saveLikeDOM(id);
     };
   });
 };
 
-addLikesEL();
+addLikesEvLis();

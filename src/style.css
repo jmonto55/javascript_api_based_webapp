@@ -127,6 +127,7 @@ footer {
   bottom: 0;
   border: solid 1px #272727;
   width: 100%;
+  background-color: #272727;
 }
 
 .footer_container {
