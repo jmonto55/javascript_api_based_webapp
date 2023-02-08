@@ -24,14 +24,14 @@ header {
 }
 
 .nav_bar {
-  width: 90%;
+  width: 95%;
   display: flex;
   justify-content: space-evenly;
   margin: auto;
 }
 
 .logo {
-  width: 30%;
+  width: 25%;
   font-size: clamp(2rem, 5vw, 3rem);
   margin: auto;
 }
