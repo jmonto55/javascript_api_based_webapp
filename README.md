@@ -57,15 +57,15 @@
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="#">N/A</a></li>
+    <li><a href="https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270">Involvement API</a></li>
+    <li><a href="https://www.themealdb.com/api.php">MealsDB API</a></li>
   </ul>
 </details>
 
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a href="https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270">Involvement API</a></li>
-    <li><a href="https://www.themealdb.com/api.php">MealsDB API</a></li>
+    <li>N/A</li>
   </ul>
 </details>
 
