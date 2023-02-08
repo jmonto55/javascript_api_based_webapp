@@ -25,6 +25,7 @@ header {
 
 .nav_bar {
   width: 95%;
+  max-width: 1300px;
   display: flex;
   justify-content: space-evenly;
   margin: auto;
