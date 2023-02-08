@@ -6,6 +6,6 @@ import { modalReservation } from './modules/modalReservation';
 //modalReservation('S14n1x9NQ')
 
 const reservationButton = document.querySelectorAll(".res-btn");
-reservationButton.forEach(element => document.addEventListener('click',modalReservation)
-    
+reservationButton.forEach(element => element.addEventListener('click',modalReservation)
+
 );
