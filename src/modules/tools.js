@@ -11,7 +11,7 @@ const displayMeals = async () => {
   const idArr = await getMeals();
   const likesArr = await getLikes();
   const cardsCont = document.querySelector('.cards_container');
-  for (let i = 0; i < 9; i += 1) {
+  for (let i = 0; i < 12; i += 1) {
     const id = idArr.meals[i].idMeal;
     const likes = likesArr.find((el) => el.item_id === id) || { likes: '0' };
     const link = idArr.meals[i].strMealThumb;

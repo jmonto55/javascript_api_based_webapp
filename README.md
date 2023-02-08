@@ -1,10 +1,8 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <!-- <img src="./readme_img.png" alt="example image" width="100%" /> -->
-
-  <h3><b>Leaderboard</b></h3>
-
+   <h1><b>Awesome Meals</b></h1>
+  <img src="./src/assets/readme_img.png" alt="Awesome Meals image" width="100%" />
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -33,9 +31,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Leaderboard <a name="about-project"></a>
+# 📖 Awesome Meals <a name="about-project"></a>
 
-**Leaderboard** is a web where the user can display scores in a list and see who is winning.
+**Awesome Meals** is an API based webapp where the user can see, like, comment and reserve their favorite meals.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -57,14 +55,15 @@
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="#">N/A</a></li>
+    <li><a href="https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270">Involvement API</a></li>
+    <li><a href="https://www.themealdb.com/api.php">MealsDB API</a></li>
   </ul>
 </details>
 
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">LocalStorage</a></li>
+    <li>N/A</li>
   </ul>
 </details>
 
@@ -72,9 +71,10 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Leaderboard allow user to save their scores**
-- **Leaderboard allow users to check all scores an see who is winning**
-- **Leaderboard allow users to store new scores and retrieve them later with the refresh button**
+- **Awesome Meals allows the user to see their favorite meals in an interactive way**
+- **Awesome Meals allows the user to like their favorite meals and check the most liked meals**
+- **Awesome Meals allows the user to comment and check all comments for any meal**
+- **Awesome Meals allows the user to reserve and check all reservations for any meal**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -102,15 +102,17 @@ In order to run this project you need:
 
 To get a local copy up and running follow these simple example steps.
 
-- Go to this link https://github.com/jmonto55/Leaderboard
+- Go to this link https://github.com/jmonto55/javascript_api_based_webapp
 - In your command terminal go to the directory where you want to clone the repository.
-- Write `git clone github.com/jmonto55/Leaderboard.gitt`
-- Go to the repository folder in your command terminal using `cd Leaderboard`.
+- Write `git clone https://github.com/jmonto55/javascript_api_based_webapp.git`
+- Go to the repository folder in your command terminal using `cd 
+javascript_api_based_webapp
+`.
 - Run `code .` to open a local copy of the project in your code editor.
 
 ### Install
 
-- Run `npm install` to install all dev dependencies for Linters, Webpack & Babel.
+- Run `npm install` to install all dev dependencies for Linters, Webpack, Jest & Babel.
 
 ### Usage
 
@@ -123,6 +125,15 @@ To run the project, execute the following command:
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
+
+
+👤 **Gueleu Farida**
+
+- GitHub: [@SFarida](https://github.com/SFarida)
+
+👤 **Sajib Arafat Siddiqui**
+
+- GitHub: [@sajibarafatsiddiqui](https://github.com/sajibarafatsiddiqui)
 
 👤 **Jose Montoya**
 
