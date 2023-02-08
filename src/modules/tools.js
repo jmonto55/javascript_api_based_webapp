@@ -10,7 +10,7 @@ const displayMeals = async () => {
   const idArr = await getMeals();
   const likesArr = await getLikes();
   const cardsCont = document.querySelector('.cards_container');
-  for (let i = 0; i < 6; i += 1) {
+  for (let i = 0; i < 9; i += 1) {
     const id = idArr.meals[i].idMeal;
     const likes = likesArr.find((el) => el.item_id === id) || { likes: '0' };
     const link = idArr.meals[i].strMealThumb;
@@ -34,11 +34,12 @@ const displayMeals = async () => {
   updateMealsQt();
 };
 
-const saveLikeDOM = async (id) => {
+const saveLikeDOM = (id) => {
   let currLikes = document.getElementById(id).childNodes[3].childNodes[3].childNodes[3].innerHTML;
   currLikes = Number(currLikes.substring(0, 2)) + 1;
   const likesContainer = document.getElementById(id).childNodes[3].childNodes[3].childNodes[3];
   likesContainer.innerHTML = `${currLikes} likes`;
+  likesContainer.previousElementSibling.style.color = 'red';
 };
 
 const saveLikeAPI = async (id) => {
@@ -49,6 +50,7 @@ const addLikesEvLis = async () => {
   await displayMeals();
   const likesArr = document.querySelectorAll('.like');
   likesArr.forEach((e) => {
+    if (e.nextElementSibling.innerHTML !== '0 likes') e.style.color = 'red';
     e.onclick = () => {
       const { id } = e.parentElement.parentElement.parentElement;
       saveLikeAPI(id);

@@ -118,11 +118,6 @@ main {
   transform: scale(1.1);
 }
 
-.like:active {
-  transform: scale(1);
-  color: #f92d45;
-}
-
 .buttons_container {
   width: 85%;
   display: flex;
