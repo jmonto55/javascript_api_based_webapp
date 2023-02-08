@@ -18,7 +18,7 @@ body {
 /* Header */
 header {
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 12px 28px 0, rgba(0, 0, 0, 0.1) 0 2px 4px 0, rgba(255, 255, 255, 0.05) 0 0 0 1px inset;
   display: flex;
 }
@@ -43,7 +43,7 @@ header {
 }
 
 .nav_list {
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.3rem);
   margin: 0;
   display: flex;
   width: 65%;
@@ -133,7 +133,7 @@ main {
 /* Footer */
 footer {
   display: flex;
-  padding: 20px;
+  padding: 10px;
   width: 100%;
   background-color: #272727;
   box-shadow: rgba(0, 0, 0, 0.2) 0 12px 28px 0, rgba(0, 0, 0, 0.1) 0 2px 4px 0, rgba(255, 255, 255, 0.05) 0 0 0 1px inset;
@@ -149,7 +149,7 @@ footer {
 }
 
 .footer_txt {
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.3rem);
   height: 100%;
   display: flex;
   align-items: center;
