@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <!-- <img src="./readme_img.png" alt="example image" width="100%" /> -->
+  <img src="./src/assets/readme_img.png" alt="Awesome Meals image" width="100%" />
 
   <h3><b>Awesome Meals</b></h3>
 
