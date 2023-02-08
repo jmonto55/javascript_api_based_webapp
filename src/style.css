@@ -17,21 +17,21 @@ body {
 /* Header */
 header {
   width: 100%;
-  padding: 20px;
+  padding: 15px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 12px 28px 0, rgba(0, 0, 0, 0.1) 0 2px 4px 0, rgba(255, 255, 255, 0.05) 0 0 0 1px inset;
+  display: flex;
 }
 
 .nav_bar {
   width: 90%;
-  height: 3rem;
   display: flex;
   justify-content: space-evenly;
-  margin: 0;
+  margin: auto;
 }
 
 .logo {
-  font-size: 2rem;
-  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: auto;
 }
 
 .nav_list_container {
@@ -41,6 +41,7 @@ header {
 }
 
 .nav_list {
+  font-size: clamp(1rem, 2vw, 1.5rem);
   margin: 0;
   display: flex;
   width: 65%;
