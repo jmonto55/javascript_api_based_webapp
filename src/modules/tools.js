@@ -1,10 +1,12 @@
-import getMeals from './api.js';
+import { getMeals, likeMeal, getLikes } from './api.js';
 
 const displayMeals = async () => {
   const idArr = await getMeals();
+  const likesArr = await getLikes();
   const cardsCont = document.querySelector('.cards_container');
   for (let i = 0; i < 6; i += 1) {
     const id = idArr.meals[i].idMeal;
+    const likes = likesArr.find((el) => el.item_id === id) || { likes: '0' };
     const link = idArr.meals[i].strMealThumb;
     const meal = idArr.meals[i].strMeal;
     cardsCont.innerHTML += `
@@ -14,7 +16,7 @@ const displayMeals = async () => {
         <h2 class="card_title">${meal}</h2>
         <div class="like_container">
           <span class="like material-symbols-outlined">favorite</span>
-          <p class="like_text">5 likes</p>
+          <p class="like_text">${likes.likes} likes</p>
         </div>
       </div>
       <div class="buttons_container">
@@ -25,4 +27,23 @@ const displayMeals = async () => {
   }
 };
 
-displayMeals();
+const saveLike = async (id) => {
+  await likeMeal(id);
+  let currLikes = document.getElementById(id).childNodes[3].childNodes[3].childNodes[3].innerHTML;
+  currLikes = Number(currLikes.substring(0, 2)) + 1;
+  const likesContainer = document.getElementById(id).childNodes[3].childNodes[3].childNodes[3];
+  likesContainer.innerHTML = `${currLikes} likes`;
+};
+
+const addLikesEL = async () => {
+  await displayMeals();
+  const likesArr = document.querySelectorAll('.like');
+  likesArr.forEach((e) => {
+    e.onclick = () => {
+      const { id } = e.parentElement.parentElement.parentElement;
+      saveLike(id);
+    };
+  });
+};
+
+addLikesEL();
