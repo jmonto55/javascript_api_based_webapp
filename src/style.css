@@ -149,6 +149,7 @@ footer {
 }
 
 .footer_txt {
+  font-size: clamp(1rem, 2vw, 1.5rem);
   height: 100%;
   display: flex;
   align-items: center;
