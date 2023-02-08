@@ -145,7 +145,7 @@ font-size:x-small;
 font-weight:550
 }
 
-#reservation_data {
+.reservation_data {
   display: flex;
   flex-direction:column;
   place-content:center ;
@@ -157,4 +157,15 @@ font-weight:550
   font-weight: bold;
 
 }
+#total_reserve {
+  text-align: center;
+}
+#reservation_details {
+  list-style: none;
+  text-align: center;
+  font-size:small;
+}
 
+#reservation_details li {
+  padding:0.2rem
+}

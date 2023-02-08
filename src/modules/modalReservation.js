@@ -1,12 +1,14 @@
 import { addReservation } from "./addReservation";
 import { getDogById } from "./getDogById"
+import { getReservationByItem } from "./getReservationByItem";
 
 export const modalReservation = async (e) =>{
     e.preventDefault();
     const id =  e.target.id;
     const data = await getDogById(id);
-    console.log(data)
-    if(data){
+    
+    
+    
     const modalContainer = await document.getElementById('modal-container');
     let ingredients = await data ? Object.keys(data.meals[0]).filter((k=>k.startsWith('strIngredient'))) : [];
     let measures= await data? Object.keys(data.meals[0]).filter((k=>k.startsWith('strMeasure'))) : [];
@@ -25,8 +27,11 @@ export const modalReservation = async (e) =>{
     ${ingredients.map((elt,n)=>`<li>${data.meals[0][elt] }:${data.meals[0][measures[n]]}</li>`).join('')}
 
     </ul>
-
-    <form id="reservation_data" method="POST" action="/apps/kpvz19cjHtM9ksn2bg7S/reservations/">
+    
+    <h3 id="total_reserve"></h3>
+    <ul id="reservation_details">
+   </ul>
+    <form id=${id} class="reservation_data">
     <label> Name:
     <input type="text" name="name" id="name">
     </label><br/>
@@ -38,7 +43,7 @@ export const modalReservation = async (e) =>{
     </label><br/>
     <button id="reserve-btn" type="submit">Reservation</button>
     </form>`
-
+    await getReservationByItem(id)
     const span = document.getElementById('close')
 span.onclick = ()=> {
     modalContainer.style.display = "none";
@@ -51,5 +56,4 @@ span.onclick = ()=> {
       modalContainer.style.display = "none";
     }
   }
-}
 }
