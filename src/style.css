@@ -150,6 +150,20 @@ main {
   box-shadow: rgba(0, 0, 0, 0.2) 0 12px 28px 0, rgba(0, 0, 0, 0.1) 0 2px 4px 0, rgba(255, 255, 255, 0.05) 0 0 0 1px inset;
 }
 
+.btn-close {
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 10%;
+  display: flex;
+  background-color: #272727;
+  color: #e7e7e7;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 12px 28px 0, rgba(0, 0, 0, 0.1) 0 2px 4px 0, rgba(255, 255, 255, 0.05) 0 0 0 1px inset;
+}
+
+.btn-close:hover {
+  background-color: #2e2c2c;
+}
+
 .btn:hover {
   background-color: #2e2c2c;
 }
@@ -311,6 +325,7 @@ footer {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(15px);
+  font-size: 1.25rem;
 }
 
 .modal-dialog {
@@ -318,7 +333,9 @@ footer {
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 30%;
+  width: 50%;
+  min-width: 370px;
+  max-width: 550px;
   color: #272727;
   border-radius: 25px;
   text-align: center;
@@ -358,12 +375,12 @@ footer {
 
 .meal_container p {
   text-align: start;
+  margin: 10px 0;
 }
 
 .comment_container ul {
   text-align: start;
   list-style-type: none;
-  width: 70%;
 }
 
 .comment_container ul li {
@@ -380,17 +397,20 @@ footer {
 .comment_form {
   text-align: start;
   margin: auto;
-  padding-top: 2%;
+  width: 100%;
+  padding: 5%;
 }
 
 .comment_form input {
+  width: 50%;
   padding: 2%;
-  margin-bottom: 1%;
+  margin-bottom: 20px;
 }
 
 .comment_form textarea {
+  width: 100%;
   padding: 2%;
-  margin-bottom: 1%;
+  margin-bottom: 20px;
 }
 
 #dog_spec li {
