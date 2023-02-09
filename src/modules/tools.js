@@ -26,7 +26,7 @@ const displayMeals = async () => {
         </div>
       </div>
       <div class="buttons_container">
-        <button class="comment btn">Comments</button>
+        <button class="comment btn" id="comment_${id}">Comments</button>
         <button class="reservation btn">Reservations</button>
       </div>
     </card>`;
