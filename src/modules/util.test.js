@@ -6,7 +6,6 @@ import updateMealsQt from './util.js';
 import { countReservationsByItem } from './getReservationByItem.js';
 import { commentCounter } from './commentCounter.js';
 
-
 describe('Add all items counter Tests', () => {
   document.body.innerHTML = `
   <li class="cont_meals">Meals</li>
@@ -26,7 +25,6 @@ describe('Add all items counter Tests', () => {
     updateMealsQt();
     expect(mealsCont.innerHTML).toBe('Meals (2)');
   });
-
 });
 
 describe('Reservation counter Tests', () => {
@@ -44,8 +42,7 @@ describe('Reservation counter Tests', () => {
   });
 });
 
-  it('Should test if number of comments was updated', () => {
-    const counter = commentCounter();
-    expect(counter).toBe(3);
-  });
+it('Should test if number of comments was updated', () => {
+  const counter = commentCounter();
+  expect(counter).toBe(3);
 });

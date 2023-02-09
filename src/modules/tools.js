@@ -2,7 +2,6 @@ import { getMeals, likeMeal, getLikes } from './api.js';
 import modalReservation from './modalReservation.js';
 import './comments.js';
 
-
 const updateMealsQt = () => {
   const mealsQuantity = document.querySelectorAll('.card').length;
   const contMeals = document.querySelector('.cont_meals');
