@@ -35,7 +35,7 @@ const displayPopup = (meal, comment = null) => {
                   <p>${meal.strIngredient4}</p>
               </div>
           </div>
-          <h5>Comments (${comment ? comment.length : 0})</h5>
+          <h5>Comments (<span id="comment_counter">${comment ? comment.length : 0}</span>)</h5>
           <div class="comment_container" id="comment_container">
              ${ul ? ul.innerHTML : ''}
           </div>
@@ -71,6 +71,7 @@ const displayComments = (comments) => {
     list.insertAdjacentHTML('beforeend', listItem);
   });
   container.appendChild(list);
+  document.getElementById('comment_counter').innerHTML = counter();
   return container;
 };
 
@@ -118,3 +119,8 @@ const commentListener = () => {
 };
 
 commentListener();
+
+const counter = () => {
+  const updatedCounter = document.querySelector('.comment_list').getElementsByTagName('li').length
+  return updatedCounter;
+}
