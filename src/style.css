@@ -181,31 +181,44 @@ footer {
   text-align: center;
 }
 
-
 #reservation_modal {
   position: relative;
   z-index: 1;
-  background-color:#0d5382;
+  background-color: #0d5382;
   margin: auto;
   padding: 1.5rem;
   border-radius: 1rem;
   border: 1px solid #888;
   width: 40%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
-  animation-duration: 0.4s
+  animation-duration: 0.4s;
 }
 
 @-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
-  to {top:1rem; opacity:1}
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 1rem;
+    opacity: 1;
+  }
 }
 
 @keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:1rem; opacity:1}
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 1rem;
+    opacity: 1;
+  }
 }
 
 #modal-container {
@@ -213,19 +226,19 @@ footer {
   position: fixed;
   left: 0;
   top: 1rem;
-  margin:0;
+  margin: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(0,0,0);      
-  background-color: rgba(0,0,0,0.4);
-  overflow:auto
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: auto;
 }
 
 span {
   font-weight: "bold";
-  font-size:2rem;
-  float:right;
-  clear: "none"
+  font-size: 2rem;
+  float: right;
+  clear: "none";
 }
 
 #close:hover,
@@ -235,20 +248,19 @@ span {
   cursor: pointer;
 }
 
-
 #dog_img {
   display: flex;
-  width :30%;
+  width: 30%;
   height: 30vh;
-  margin:auto;
-  padding:1rem; 
+  margin: auto;
+  padding: 1rem;
 }
 
 #dog_name {
   text-align: center;
   font-size: large;
-  margin:0;
-  padding:0
+  margin: 0;
+  padding: 0;
 }
 
 #description {
@@ -257,47 +269,44 @@ span {
 
 #dog_spec {
   list-style: none;
-  display:grid;
-  grid-template-columns: auto auto ;
-  width:50%;
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 50%;
   margin: auto;
   column-gap: 1rem;
-  padding-top:1rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
-  
 }
 
-#dog_spec li{
-padding:0;
-font-size:x-small;
-font-weight:550;
-text-align: start;
+#dog_spec li {
+  padding: 0;
+  font-size: x-small;
+  font-weight: 550;
+  text-align: start;
 }
 
 .reservation_data {
   display: flex;
-  flex-direction:column;
-  place-content:center ;
-  width:30%;
-  margin:auto;
-  padding:1rem;
+  flex-direction: column;
+  place-content: center;
+  width: 30%;
+  margin: auto;
+  padding: 1rem;
   font-size: x-small;
   font-weight: bold;
-
 }
+
 #total_reserve {
   text-align: center;
 }
+
 #reservation_details {
   list-style: none;
   text-align: center;
-  font-size:x-small;
+  font-size: x-small;
   font-weight: bold;
 }
 
 #reservation_details li {
-  padding:0.5rem
+  padding: 0.5rem;
 }
-
-
-
