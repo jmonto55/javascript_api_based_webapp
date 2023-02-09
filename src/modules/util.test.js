@@ -3,6 +3,7 @@
  */
 
 import updateMealsQt from './util.js';
+import { countReservationsByItem } from './getReservationByItem.js';
 import { commentCounter } from './commentCounter.js';
 
 describe('Add all items counter Tests', () => {
@@ -24,8 +25,24 @@ describe('Add all items counter Tests', () => {
     updateMealsQt();
     expect(mealsCont.innerHTML).toBe('Meals (2)');
   });
-  it('Should test if number of comments was updated', () => {
-    const counter = commentCounter();
-    expect(counter).toBe(3);
+});
+
+describe('Reservation counter Tests', () => {
+  document.body.innerHTML = `
+
+  <ul id="reservation_details">
+  <li>2023-02-01-2023-02-07 by Sajib Arafat Siddiqui</li>
+  <li>023-02-01-2023-02-07 by Sajib Arafat Siddiqui</li>
+  </ul>`;
+
+  it('Should test if countReservationsByItem can count total reservations by item', () => {
+    const reservationCounter = countReservationsByItem();
+
+    expect(reservationCounter).toBe(2);
   });
+});
+
+it('Should test if number of comments was updated', () => {
+  const counter = commentCounter();
+  expect(counter).toBe(3);
 });
