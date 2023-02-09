@@ -1,5 +1,7 @@
 // Involvement API app_id: kpvz19cjHtM9ksn2bg7S
 
+const invAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/kpvz19cjHtM9ksn2bg7S/likes';
+
 const getMeals = async () => {
   const API_URL = 'https://www.themealdb.com/api/json/v1/1/search.php?f=m';
   const res = await fetch(API_URL);
@@ -8,7 +10,7 @@ const getMeals = async () => {
 };
 
 const likeMeal = async (id) => {
-  const API_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/kpvz19cjHtM9ksn2bg7S/likes';
+  const API_URL = invAPI;
   fetch(API_URL,
     {
       method: 'POST',
@@ -22,7 +24,7 @@ const likeMeal = async (id) => {
 };
 
 const getLikes = async () => {
-  const API_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/kpvz19cjHtM9ksn2bg7S/likes';
+  const API_URL = invAPI;
   const res = await fetch(API_URL);
   const data = await res.json();
   return data;
