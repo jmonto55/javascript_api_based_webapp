@@ -1,5 +1,7 @@
+/* eslint-disable import/no-unresolved */
 import axios from 'axios';
 import { endPoints } from './config.js';
+import { commentCounter } from './commentCounter.js';
 
 const baseUrl = 'https://www.themealdb.com/api/json/v1/1/lookup.php';
 const baseUrlLikes = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
@@ -71,7 +73,7 @@ const displayComments = (comments) => {
     list.insertAdjacentHTML('beforeend', listItem);
   });
   container.appendChild(list);
-  document.getElementById('comment_counter').innerHTML = counter();
+  document.getElementById('comment_counter').innerHTML = commentCounter();
   return container;
 };
 
@@ -119,8 +121,3 @@ const commentListener = () => {
 };
 
 commentListener();
-
-const counter = () => {
-  const updatedCounter = document.querySelector('.comment_list').getElementsByTagName('li').length
-  return updatedCounter;
-}
