@@ -1,5 +1,5 @@
 import { getMeals, likeMeal, getLikes } from './api.js';
-import './comments.js'
+import './comments.js';
 
 const updateMealsQt = () => {
   const mealsQuantity = document.querySelectorAll('.card').length;
