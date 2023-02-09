@@ -1,6 +1,6 @@
 import axios from "axios"
 
-export const getDogById  = async id => { 
+export const getMealById  = async id => { 
     try {
         const res = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
         const result = res.data

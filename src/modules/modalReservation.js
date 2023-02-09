@@ -1,30 +1,23 @@
 import { addReservation } from "./addReservation";
-import { getDogById } from "./getDogById"
+import { getMealById } from "./getMealById";
 import { getReservationByItem } from "./getReservationByItem";
 
 export const modalReservation = async (e) =>{
     e.preventDefault();
-    const id =  e.target.id;
-    const data = await getDogById(id);
-    
-    
-    
+    const id =  e.target.parentElement.parentElement.id;
+    const data = await getMealById(id);
     const modalContainer = await document.getElementById('modal-container');
-    let ingredients = await data ? Object.keys(data.meals[0]).filter((k=>k.startsWith('strIngredient'))) : [];
+    let ingredients = await data ? Object.keys(data.meals[0]).filter((k=>k.startsWith('strIngredient'))).slice(0,4) : [];
     let measures= await data? Object.keys(data.meals[0]).filter((k=>k.startsWith('strMeasure'))) : [];
-    const modalContent=document.getElementsByClassName('reservation')[0];
+    const modalContent=document.getElementById('reservation_modal');
     modalContainer.style.display = "block"
     modalContent.innerHTML = `
     <span id="close">&times</span>
     <img id='dog_img' src=${data.meals[0].strMealThumb} alt=${data.meals[0].strMeal
     }></img>
     <h2 id='dog_name'>${data.meals[0].strMeal}</h2>
-    <p id='description'>${data.meals[0].strInstructions}</p>
     <ul id='dog_spec'>
-    <li>Area:${data.meals[0].strArea}</li>
-
-    <li>Category:${data .meals[0].strCategory}</li>
-    ${ingredients.map((elt,n)=>`<li>${data.meals[0][elt] }:${data.meals[0][measures[n]]}</li>`).join('')}
+    ${ingredients.map((elt,n)=>`<li>${data.meals[0][elt] }</li>`).join('')}
 
     </ul>
     
@@ -57,3 +50,4 @@ span.onclick = ()=> {
     }
   }
 }
+

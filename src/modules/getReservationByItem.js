@@ -7,12 +7,19 @@ export const getReservationByItem = async (item) =>{
     try {
         const res = await axios.get(baseUrl+endpoint);
         const result = res.data
-        const totalReserveByItem = document.getElementById('total_reserve')
         const reservationDetailsByItem = document.getElementById('reservation_details')   
-        totalReserveByItem.innerHTML = `Reservation(${result.length})`
         reservationDetailsByItem.innerHTML= result.map((elt)=>`<li>${elt.date_start}-${elt.date_end} by ${elt.username}</li>`).join('')
+
+        let reservationCounter =countReservationsByItem()
+        const totalReserveByItem = document.getElementById('total_reserve')
+        totalReserveByItem.innerHTML = `Reservation(${reservationCounter})`
         return ;
       } catch (error) {
         console.error('There was an error!', error);
       }
+}
+
+export const countReservationsByItem=()=>{
+    let reservationCounter = document.getElementById('reservation_details').children.length
+    return reservationCounter
 }
