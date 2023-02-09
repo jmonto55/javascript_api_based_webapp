@@ -1,23 +1,22 @@
-import { addReservation } from "./addReservation";
-import { getMealById } from "./getMealById";
-import { getReservationByItem } from "./getReservationByItem";
+import addReservation from './addReservation.js';
+import getMealById from './getMealById.js';
+import { getReservationByItem } from './getReservationByItem.js';
 
-export const modalReservation = async (e) =>{
-    e.preventDefault();
-    const id =  e.target.parentElement.parentElement.id;
-    const data = await getMealById(id);
-    const modalContainer = await document.getElementById('modal-container');
-    let ingredients = await data ? Object.keys(data.meals[0]).filter((k=>k.startsWith('strIngredient'))).slice(0,4) : [];
-    let measures= await data? Object.keys(data.meals[0]).filter((k=>k.startsWith('strMeasure'))) : [];
-    const modalContent=document.getElementById('reservation_modal');
-    modalContainer.style.display = "block"
-    modalContent.innerHTML = `
+const modalReservation = async (e) => {
+  e.preventDefault();
+  const { id } = e.target.parentElement.parentElement;
+  const data = await getMealById(id);
+  const modalContainer = await document.getElementById('modal-container');
+  const ingredients = await data ? Object.keys(data.meals[0]).filter(((k) => k.startsWith('strIngredient'))).slice(0, 4) : [];
+  const modalContent = document.getElementById('reservation_modal');
+  modalContainer.style.display = 'block';
+  modalContent.innerHTML = `
     <span id="close">&times</span>
     <img id='dog_img' src=${data.meals[0].strMealThumb} alt=${data.meals[0].strMeal
-    }></img>
+}></img>
     <h2 id='dog_name'>${data.meals[0].strMeal}</h2>
     <ul id='dog_spec'>
-    ${ingredients.map((elt,n)=>`<li>${data.meals[0][elt] }</li>`).join('')}
+    ${ingredients.map((elt) => `<li>${data.meals[0][elt]}</li>`).join('')}
 
     </ul>
     
@@ -35,19 +34,20 @@ export const modalReservation = async (e) =>{
     <input type="date" name="date_end" id="date_end">
     </label><br/>
     <button id="reserve-btn" type="submit">Reservation</button>
-    </form>`
-    await getReservationByItem(id)
-    const span = document.getElementById('close')
-span.onclick = ()=> {
-    modalContainer.style.display = "none";
-  }
+    </form>`;
+  await getReservationByItem(id);
+  const span = document.getElementById('close');
+  span.onclick = () => {
+    modalContainer.style.display = 'none';
+  };
 
-  const reservationButton = document.getElementById('reserve-btn')
-  reservationButton.addEventListener('click',addReservation)
-  window.onclick = (event)=> {
-    if (event.target == modalContainer) {
-      modalContainer.style.display = "none";
+  const reservationButton = document.getElementById('reserve-btn');
+  reservationButton.addEventListener('click', addReservation);
+  window.onclick = (event) => {
+    if (event.target === modalContainer) {
+      modalContainer.style.display = 'none';
     }
-  }
-}
+  };
+};
 
+export default modalReservation;

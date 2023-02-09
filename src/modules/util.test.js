@@ -30,8 +30,8 @@ describe('Reservation counter Tests', () => {
   </ul>`;
 
   it('Should test if countReservationsByItem can count total reservations by item', () => {
-    const reservationCounter =  countReservationsByItem();
-  
+    const reservationCounter = countReservationsByItem();
+
     expect(reservationCounter).toBe(2);
   });
 });

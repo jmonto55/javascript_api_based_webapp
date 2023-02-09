@@ -1,5 +1,5 @@
 import { getMeals, likeMeal, getLikes } from './api.js';
-import { modalReservation } from './modalReservation.js';
+import modalReservation from './modalReservation.js';
 
 const updateMealsQt = () => {
   const mealsQuantity = document.querySelectorAll('.card').length;
@@ -31,8 +31,8 @@ const displayMeals = async () => {
         <button class="reservation btn">Reservations</button>
       </div>
     </card>`;
-    const reservationButton = document.querySelectorAll(".reservation");
-    reservationButton.forEach(element => element.addEventListener('click',modalReservation));
+    const reservationButton = document.querySelectorAll('.reservation');
+    reservationButton.forEach((element) => element.addEventListener('click', modalReservation));
   }
   updateMealsQt();
 };
