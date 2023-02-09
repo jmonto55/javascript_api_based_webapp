@@ -1,5 +1,7 @@
 import { getMeals, likeMeal, getLikes } from './api.js';
 import modalReservation from './modalReservation.js';
+import './comments.js';
+
 
 const updateMealsQt = () => {
   const mealsQuantity = document.querySelectorAll('.card').length;
@@ -27,7 +29,7 @@ const displayMeals = async () => {
         </div>
       </div>
       <div class="buttons_container">
-        <button class="comment btn">Comments</button>
+        <button class="comment btn" id="comment_${id}">Comments</button>
         <button class="reservation btn">Reservations</button>
       </div>
     </card>`;
