@@ -1,8 +1,8 @@
+import axios from 'axios';
 import { endPoints } from './config.js';
 
 const baseUrl = 'https://www.themealdb.com/api/json/v1/1/lookup.php';
 const baseUrlLikes = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
-const axios = require('axios');
 
 const getComment = async (id) => {
   try {
@@ -62,14 +62,14 @@ const displayComments = (comments) => {
   container.replaceChildren();
   const list = document.createElement('ul');
   list.setAttribute('class', 'comment_list');
-  for (let i = 0; i < comments.length; i = +1) {
+  comments.forEach((elt) => {
     const listItem = `<li class="list_item">
-                  <span>${comments[i].creation_date} </span>
-                  <span>${comments[i].username}: </span> 
-                  <span>${comments[i].comment}</span>
+                  <span>${elt.creation_date} </span>
+                  <span>${elt.username}: </span> 
+                  <span>${elt.comment}</span>
               </li>`;
     list.insertAdjacentHTML('beforeend', listItem);
-  }
+  });
   container.appendChild(list);
   return container;
 };
