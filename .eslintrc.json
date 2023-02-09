@@ -18,14 +18,7 @@
       "js": "always", "json": "always"
     }]
   },
-  "settings": {
-    "import/resolver": {
-        "node": {
-          "extensions": [".js", ".jsx"],
-          "moduleDirectory": [".", "node_modules"]
-        }
-      }
-    },
+  
   "ignorePatterns": [
     "dist/",
     "build/"
