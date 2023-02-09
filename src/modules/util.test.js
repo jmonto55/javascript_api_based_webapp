@@ -3,7 +3,7 @@
  */
 
 import updateMealsQt from './util.js';
-import commentCounter from './commentCounter.js'
+import { commentCounter } from './commentCounter.js';
 
 describe('Add all items counter Tests', () => {
   document.body.innerHTML = `
