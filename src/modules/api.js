@@ -3,7 +3,7 @@
 const invAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/kpvz19cjHtM9ksn2bg7S/likes';
 
 const getMeals = async () => {
-  const API_URL = 'https://www.themealdb.com/api/json/v1/1/search.php?f=m';
+  const API_URL = 'https://www.themealdb.com/api/json/v1/1/search.php?f=f';
   const res = await fetch(API_URL);
   const data = await res.json();
   return data;

@@ -37,18 +37,18 @@ const displayPopup = (meal, comment = null) => {
                   <p>${meal.strIngredient4}</p>
               </div>
           </div>
-          <h5>Comments (<span id="comment_counter">${comment ? comment.length : 0}</span>)</h5>
+          <h4>Comments (<span id="comment_counter">${comment ? comment.length : 0}</span>)</h4>
           <div class="comment_container" id="comment_container">
              ${ul ? ul.innerHTML : ''}
           </div>
-          <h5>Add a comment</h5>
+          <h4>Add a comment</h4>
           <form id="form" class="comment_form">
               <input type="hidden" value="${meal.idMeal}" id="mealId"/>
               <div>
                   <input type="text" id="name" name="name" placeholder="Your Name" required>
               </div>
               <div>
-                  <textarea id="comment" name="w3review" rows="4" cols="50" placeholder="Your insight" required></textarea><br>
+                  <textarea id="comment" name="w3review" rows="4" placeholder="Your insight" required></textarea><br>
               </div>
               <div class="buttons_container">
               <button class="btn btn-outline-dark">Submit</button>
