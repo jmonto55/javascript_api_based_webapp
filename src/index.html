@@ -11,11 +11,11 @@
     <title>Document</title>
 </head>
 
-<body>
-    <header>
-        <nav class="nav_bar">
+<body class="flex">
+    <header class="flex">
+        <nav class="nav_bar flex">
             <figure class="logo">🥗</figure>
-            <ul class="nav_list">
+            <ul class="nav_list flex">
                 <li class="nav_list_li cont_meals">Meals</li>
                 <li class="nav_list_li">About Us</li>
                 <li class="nav_list_li">Contact</li>
@@ -24,13 +24,13 @@
     </header>
     <main>
         <div id="modal-container"><div id="reservation_modal"></div></div>
-        <div class="cards_container" id="data"></div>
+        <div class="cards_container flex" id="data"></div>
         <div id="myModal" class="modal">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal_header">
+                    <div class="modal_header flex">
                         <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        <button type="button" class="btn-close flex" data-bs-dismiss="modal" aria-label="Close"
                             id="closeModal">
                             <span class="material-symbols-outlined">close</span>
                         </button>
@@ -41,9 +41,9 @@
         </div>
 
     </main>
-    <footer>
-        <div class="footer_container">
-            <p class="footer_txt">“A recipe has no soul. You, as the cook, must bring soul to the recipe.” - Thomas
+    <footer class="flex">
+        <div class="footer_container flex">
+            <p class="footer_txt flex">“A recipe has no soul. You, as the cook, must bring soul to the recipe.” - Thomas
                 Keller</p>
         </div>
     </footer>
