@@ -12,6 +12,8 @@ describe('Add all items counter Tests', () => {
   <div class="cards_container">
     <card id="52776" class="card"></card>
     <card id="52765" class="card"></card>
+    <card id="52776" class="card"></card>
+    <card id="52765" class="card"></card>
   </div>
 
   <ul class="comment_list">
@@ -28,7 +30,7 @@ describe('Add all items counter Tests', () => {
   it('Should test if updateMealsQt is adding all items counter to the home page', () => {
     const mealsCont = document.querySelector('.cont_meals');
     updateMealsQt();
-    expect(mealsCont.innerHTML).toBe('Meals (2)');
+    expect(mealsCont.innerHTML).toBe('Meals (4)');
   });
 
   it('Should test if number of comments was updated', () => {

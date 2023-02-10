@@ -7,9 +7,8 @@ const getMealById = async (id) => {
     const result = res.data;
     return result;
   } catch (error) {
-    console.error('There was an error!', error);
+    return null;
   }
-  return [];
 };
 
 export default getMealById;

@@ -21,6 +21,7 @@ export const getReservationByItem = async (item) => {
     totalReserveByItem.innerHTML = `Reservation(${reservationCounter})`;
     return;
   } catch (error) {
-    console.error('There was an error!', error);
+    return null;
   }
+  return null;
 };

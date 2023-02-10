@@ -17,8 +17,9 @@ const addReservation = async (id) => {
     await getReservationByItem(itemId);
     document.getElementById(itemId).reset();
   } catch (error) {
-    console.error('There was an error!', error);
+    return null;
   }
+  return null;
 };
 
 export default addReservation;
