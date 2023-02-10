@@ -14,14 +14,13 @@ export const getReservationByItem = async (item) => {
     const res = await axios.get(baseUrl + endpoint);
     const result = res.data;
     const reservationDetailsByItem = document.getElementById('reservation_details');
-    reservationDetailsByItem.innerHTML = result.map((elt) => `<li><b>From</b> ${elt.date_start}  <b>to</b> ${elt.date_end} <b>by</b> ${elt.username}</li>`).join('');
+    reservationDetailsByItem.innerHTML = result.map((elt) => `<li><b>From</b> ${elt.date_start}  <b>to</b> ${elt.date_end}  ${elt.username}</li>`).join('');
 
     const reservationCounter = countReservationsByItem();
     const totalReserveByItem = document.getElementById('total_reserve');
     totalReserveByItem.innerHTML = `Reservation(${reservationCounter})`;
     return;
   } catch (error) {
-    return null;
+    console.error('There was an error!', error);
   }
-  return null;
 };
