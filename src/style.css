@@ -1,4 +1,6 @@
 /* stylelint-disable csstree/validator */
+
+/* We had to disable this rule because clamp() is not suppported by the current Linter version */
 * {
   box-sizing: border-box;
   font-family: 'Itim', sans-serif;
@@ -261,7 +263,7 @@ footer {
   background-color: #272727;
   color: #e7e7e7;
   font-size: 1.6rem;
-  clear: "none";
+  clear: none;
   box-shadow: rgba(0, 0, 0, 0.2) 0 12px 28px 0, rgba(0, 0, 0, 0.1) 0 2px 4px 0, rgba(255, 255, 255, 0.05) 0 0 0 1px inset;
   border-radius: 10%;
 }
