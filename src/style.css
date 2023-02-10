@@ -279,6 +279,7 @@ footer {
   width: 280px;
   height: 230px;
   margin: 50px auto 30px auto;
+  border-radius: 5px;
 }
 
 #dog_name {
