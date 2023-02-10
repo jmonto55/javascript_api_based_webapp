@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import axios from 'axios';
 import { endPoints } from './config.js';
 import { commentCounter } from './commentCounter.js';
@@ -22,12 +21,12 @@ const displayPopup = (meal, comment = null) => {
   let ul;
   const itemCard = `
       <card class="">
-          <div class="popup-img">
+          <div class="popup-img flex">
           <img src='${meal.strMealThumb}' class="card_image" alt="dog image" />
           </div>
-        <div class="card-body">
+        <div class="card-body flex">
           <h2 class="card-title">${meal.strMeal}</h2>
-          <div class="meal_container">
+          <div class="meal_container flex">
               <div>
                   <p>${meal.strIngredient1}</p>
                   <p>${meal.strIngredient2}</p>
@@ -38,7 +37,7 @@ const displayPopup = (meal, comment = null) => {
               </div>
           </div>
           <h4>Comments (<span id="comment_counter">${comment ? comment.length : 0}</span>)</h4>
-          <div class="comment_container" id="comment_container">
+          <div class="comment_container flex" id="comment_container">
              ${ul ? ul.innerHTML : ''}
           </div>
           <h4>Add a comment</h4>

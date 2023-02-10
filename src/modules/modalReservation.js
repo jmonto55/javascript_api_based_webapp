@@ -12,7 +12,7 @@ const modalReservation = async (e) => {
   modalContainer.style.display = 'block';
   modalContent.innerHTML = `
     <span id="close" class="material-symbols-outlined">close</span>
-    <img id='dog_img' src=${data.meals[0].strMealThumb} alt=${data.meals[0].strMeal
+    <img id='dog_img' class="flex" src=${data.meals[0].strMealThumb} alt=${data.meals[0].strMeal
 }></img>
     <h2 id='dog_name'>${data.meals[0].strMeal}</h2>
     <ul id='dog_spec'>
@@ -23,7 +23,7 @@ const modalReservation = async (e) => {
     <h3 id="total_reserve"></h3>
     <ul id="reservation_details">
    </ul>
-    <form class="reservation_data">
+    <form class="reservation_data flex">
     <label> Name:
     <input type="text" name="name" id="name">
     </label><br/>

@@ -18,16 +18,16 @@ const displayMeals = async () => {
     const link = idArr.meals[i].strMealThumb;
     const meal = idArr.meals[i].strMeal;
     cardsCont.innerHTML += `
-    <card id="${id}" class="card">
+    <card id="${id}" class="card flex">
       <img src='${link}' class="card_image" alt="dog image" />
-      <div class="card_body">
+      <div class="card_body flex">
         <h2 class="card_title">${meal}</h2>
-        <div class="like_container">
+        <div class="like_container flex">
           <span class="like material-symbols-outlined">favorite</span>
           <p class="like_text">${likes.likes} likes</p>
         </div>
       </div>
-      <div class="buttons_container">
+      <div class="buttons_container flex">
         <button class="comment btn" id="comment_${id}">Comments</button>
         <button class="reservation btn">Reservations</button>
       </div>
