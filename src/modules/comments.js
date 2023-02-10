@@ -37,7 +37,7 @@ const displayPopup = (meal, comment = null) => {
                   <p>${meal.strIngredient4}</p>
               </div>
           </div>
-          <h5>Comments (<span id="comment_counter">${comment ? comment.length : 0}</span>)</h5>
+          <h4>Comments (<span id="comment_counter">${comment ? comment.length : 0}</span>)</h4>
           <div class="comment_container" id="comment_container">
              ${ul ? ul.innerHTML : ''}
           </div>

@@ -327,7 +327,6 @@ footer {
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
   left: 0;
   top: 0;
   width: 100vw;
@@ -448,5 +447,5 @@ footer {
 }
 
 #reserve-btn {
-  width: 50%;
+  width: 25%;
 }

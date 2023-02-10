@@ -23,7 +23,7 @@ const modalReservation = async (e) => {
     <h3 id="total_reserve"></h3>
     <ul id="reservation_details">
    </ul>
-    <form id=${id} class="reservation_data">
+    <form class="reservation_data">
     <label> Name:
     <input type="text" name="name" id="name">
     </label><br/>
@@ -33,7 +33,7 @@ const modalReservation = async (e) => {
     <label> End Date:
     <input type="date" name="date_end" id="date_end">
     </label><br/>
-    <button id="reserve-btn" class="btn" type="submit">Reservation</button>
+    <button id="reserve-btn" class="btn" type="submit">Reserve</button>
     </form>`;
   await getReservationByItem(id);
   const span = document.getElementById('close');
@@ -41,8 +41,13 @@ const modalReservation = async (e) => {
     modalContainer.style.display = 'none';
   };
 
+  const form = document.querySelector('.reservation_data');
   const reservationButton = document.getElementById('reserve-btn');
-  reservationButton.addEventListener('click', addReservation);
+  reservationButton.onclick = (e) => {
+    e.preventDefault();
+    addReservation(id);
+    form.reset();
+  };
   window.onclick = (event) => {
     if (event.target === modalContainer) {
       modalContainer.style.display = 'none';
