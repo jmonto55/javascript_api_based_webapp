@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import axios from 'axios';
 
 const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';

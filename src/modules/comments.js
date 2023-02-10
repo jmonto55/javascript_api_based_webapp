@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import axios from 'axios';
 import { endPoints } from './config.js';
 import { commentCounter } from './commentCounter.js';
