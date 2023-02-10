@@ -11,7 +11,7 @@ const modalReservation = async (e) => {
   const modalContent = document.getElementById('reservation_modal');
   modalContainer.style.display = 'block';
   modalContent.innerHTML = `
-    <span id="close">&times</span>
+    <span id="close" class="material-symbols-outlined">close</span>
     <img id='dog_img' src=${data.meals[0].strMealThumb} alt=${data.meals[0].strMeal
 }></img>
     <h2 id='dog_name'>${data.meals[0].strMeal}</h2>
@@ -33,7 +33,7 @@ const modalReservation = async (e) => {
     <label> End Date:
     <input type="date" name="date_end" id="date_end">
     </label><br/>
-    <button id="reserve-btn" type="submit">Reservation</button>
+    <button id="reserve-btn" class="btn" type="submit">Reservation</button>
     </form>`;
   await getReservationByItem(id);
   const span = document.getElementById('close');
